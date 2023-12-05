@@ -10,6 +10,14 @@ $(document).ready(function(){
         .on("submit", "#post_form", postTopic)
         .on("click", ".post_edit_button", showPostEditForm)
         .on("submit", ".active_post_edit_form", savePostEditForm)
+        /* Function for toggling display of other elements of delete_form when delete button is clicked */
+        .on("click", ".delete_button", function(){
+            $(this).siblings("span, .no_button, .yes_button").toggle();
+        })
+        /* Function for hiding other elements of delete_form when no button is clicked */
+        .on("click", ".no_button", function(){                                      
+            $(this).siblings("span, .no_button, .yes_button").toggle().end().toggle();
+        })
         .on("submit", ".post_delete_form", function(event){                         /* Function for deleting a topic */
             event.preventDefault();
             $(this).closest(".post").remove();
@@ -17,7 +25,7 @@ $(document).ready(function(){
         .on("submit", ".comment_form", postComment)
         .on("click", ".comment_edit_button", showCommentEditForm)
         .on("submit", ".active_comment_edit_form", saveCommentEditForm)
-        .on("submit", ".comment_delete_form", commentDeleteForm);
+        .on("submit", ".comment_delete_form", deleteComment);
 });
 
 /**
@@ -43,6 +51,7 @@ function postTopic(event){
         $("#post_forum_list").prepend(cloned_topic);
         $("#post_textarea").val("");
         $("#post_textarea").removeClass("border-red");
+
     }
     else{
         $("#post_textarea").addClass("border-red");
@@ -60,12 +69,12 @@ function showPostEditForm(event){
     event.preventDefault();
 
     let post = $(this).closest(".post");
-    let edit_form = $(".edit_form").clone();
-    edit_form.removeClass("edit_form");
+    let edit_form = $("#topic_edit_form").clone();
+    edit_form.removeAttr("id");
     edit_form.addClass("active_post_edit_form");
 
     let post_content = post.find(".post_content").text();
-    edit_form.find(".edit_textarea").val(post_content);
+    edit_form.find(".topic_edit_textarea").val(post_content);
     post.find(".post_content").replaceWith(edit_form);
 }
 
@@ -80,10 +89,10 @@ function savePostEditForm(event){
     event.preventDefault();
 
     let post = $(this).closest(".post");
-    let edit_textarea = post.find(".edit_textarea").val().trim();
+    let edit_textarea = post.find(".topic_edit_textarea").val().trim();
 
     post.prepend(`<p class="post_content">${edit_textarea}</p>`);
-    post.find("active_post_edit_form").remove();
+    post.find(".active_post_edit_form").remove();
 }
 
 /**
@@ -110,12 +119,12 @@ function postComment(event){
 
         post.find(".post_comment_list").prepend(cloned_comment);
         comment_textarea.val("");
-        $("#comment_textarea").removeClass("border-red");
+        comment_textarea.removeClass("border-red");
 
         updateResponseCount(post);
     }
     else{
-        $(".comment_textarea").addClass("border-red");
+        comment_textarea.addClass("border-red");
     }
 }
 
@@ -130,12 +139,12 @@ function showCommentEditForm(event){
     event.preventDefault();
 
     let comment = $(this).closest(".comment");
-    let edit_form = $(".edit_form").clone();
-    edit_form.removeClass("edit_form");
+    let edit_form = $("#comment_edit_form").clone();
+    edit_form.removeAttr("id");
     edit_form.addClass("active_comment_edit_form");
 
     let comment_content = comment.find(".comment_content").text();
-    edit_form.find(".edit_textarea").val(comment_content);
+    edit_form.find(".comment_edit_textarea").val(comment_content);
     comment.find(".comment_content").replaceWith(edit_form);
 }
 
@@ -150,7 +159,7 @@ function saveCommentEditForm(event){
     event.preventDefault();
 
     let comment = $(this).closest(".comment");
-    let edit_textarea = comment.find(".edit_textarea").val().trim();
+    let edit_textarea = comment.find(".comment_edit_textarea").val().trim();
 
     comment.prepend(`<p class="comment_content">${edit_textarea}</p>`);
     comment.find(".active_comment_edit_form").remove();
@@ -163,7 +172,7 @@ function saveCommentEditForm(event){
  * @author Nathaniel
  */
 
-function commentDeleteForm(event){
+function deleteComment(event){
     event.preventDefault();
 
     let comment =  $(this).closest(".comment");

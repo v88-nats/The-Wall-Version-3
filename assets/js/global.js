@@ -1,9 +1,3 @@
-/**
- * DOCU: Global Function
- * Last Updated: December 05, 2023
- * @memberof module:jQuery_The_Wall_Final
- * @author Nathaniel
- */
 
 /**
  * DOCU: Function for input validation.
@@ -32,5 +26,5 @@ function validateForm(inputs){
  */
 function updateResponseCount(post){
     let comment_count = post.find(".post_comment_list .comment").length;
-    post.find(".response_count").text(comment_count = "Responses");
+    post.find(".response_count").text(comment_count + " Responses");
 }

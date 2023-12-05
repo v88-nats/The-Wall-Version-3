@@ -12,11 +12,10 @@
     border: 1px solid red !important;
 }
 #wrapper{
+    background-color: #2C2D34;
     color: @white;
     margin: 0px auto;
     min-height: 100vh;
-    width: 1920px;
-    
     header{
         align-items: center;
         background-color: #1E1F25;
@@ -64,7 +63,9 @@
         background-color: #2C2D34;
         display: flex;
         flex-direction: column;
-        padding: 50px 471px;
+        padding: 50px 0px;
+        max-width: 978px;
+        margin: 0px auto;
         #username{
             font-size: 21px;
             margin-bottom: 6px;
@@ -87,7 +88,7 @@
                 outline: none;
                 padding: 19px 20px;
                 resize: none;
-                width: 938px;
+                width: 95.9%;
                 &:focus{
                     border: 1px solid @blue;
                 }
@@ -208,6 +209,7 @@
                             .post_time{
                                 border-right: 1px solid @purple;
                                 padding-right: 50px;
+                                margin-left: 5px;
                             }
                             .response_count{
                                 margin-left: 20px;
@@ -273,6 +275,9 @@
                                     margin-bottom: 25px;
                                     .comment_details{
                                         display: flex;
+                                        .comment_time{
+                                            margin-left: 5px;
+                                        }
                                     }
                                 }
                             }
@@ -281,7 +286,8 @@
                     .active_post_edit_form,
                     .active_comment_edit_form{
                         position: relative;
-                        .edit_textarea{
+                        .topic_edit_textarea,
+                        .comment_edit_textarea{
                             background-color: #3A3C46;
                             border-radius: 10px;
                             border: none;
@@ -300,16 +306,18 @@
                             }
                         }
                         .save_button{
-                            background-color: #00A3FF;
+                            background-color: @blue;
                             border-radius: 8.86px;
                             border: none;
                             color: #FFFFFF;
                             cursor: pointer;
+                            display: flex;
                             height: 38px;
-                            width: 100px;
                             position: absolute;
-                            top: 21px;
                             right: 25px;
+                            top: 21px;
+                            padding: 0px 36px;
+                            align-items: center;
                         }
                     }
                 }
@@ -318,6 +326,16 @@
         #topic_template_container_clone{
             display: none;
         }
+    }
+}
 
+@media only screen and (max-width: 480px){
+    #user_profile_container{
+        display: flex;
+        font: 300 14px "Roboto";
+        #user{
+            display: none;
+        }
+        
     }
 }

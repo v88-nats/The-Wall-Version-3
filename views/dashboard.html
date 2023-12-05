@@ -18,7 +18,7 @@
             <h1>THE WALL</h1>
             <div id="user_profile_container">
                 <span id="user">Nathaniel Nardo</span>
-                <a id="logout" href="signin.html">Logout</a>
+                <a id="logout" href="signin.html"><span>Logout</span></a>
             </div>
         </header>
         <div id="main_container">
@@ -44,7 +44,7 @@
                     <li data-post-id="" id="post_topic_clone" class="post">
                         <p class="post_content"></p>
                         <div class="post_action_container">
-                            <p class="post_details">Nathaniel Nardo <span class="post_time">few secs ago.</span> <span class="response_count">0 Responses</span></p>
+                            <p class="post_details">Nathaniel Nardo <span class="post_time"> (few secs ago)</span> <span class="response_count">0 Responses</span></p>
                             <div class="action_button_container">
                                 <button type="button" class="post_edit_button"></button>
                                 <form class="post_delete_form">
@@ -81,10 +81,16 @@
                             </div>
                         </div>    
                     </li>
+
                 </ul>
 
-                <form class="edit_form" action="#">
-                    <textarea class="edit_textarea"></textarea>
+                <form id="topic_edit_form" action="#">
+                    <textarea class="topic_edit_textarea"></textarea>
+                    <button type="submit" class="save_button">Save</button>
+                </form>
+
+                <form id="comment_edit_form" action="#">
+                    <textarea class="comment_edit_textarea"></textarea>
                     <button type="submit" class="save_button">Save</button>
                 </form>
 

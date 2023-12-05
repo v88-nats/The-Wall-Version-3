@@ -8,7 +8,7 @@
 }
 #wrapper {
   background-color: #2C2D34;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 0px auto;
   min-height: 100vh;
 }
@@ -20,7 +20,7 @@
   justify-content: space-between;
 }
 #wrapper header h1 {
-  color: #ffffff;
+  color: #FFFFFF;
   display: flex;
   font: 300 21px "Roboto";
 }
@@ -42,7 +42,7 @@
 }
 #wrapper header #user_profile_container #logout {
   align-items: center;
-  color: #ffffff;
+  color: #FFFFFF;
   display: flex;
   margin: 0px 26px;
   text-decoration: none;
@@ -69,7 +69,7 @@
 }
 #wrapper #main_container #welcome_message {
   margin-bottom: 56px;
-  color: #6d7186;
+  color: #6D7186;
   font-size: 17.51px;
 }
 #wrapper #main_container #post_form {
@@ -79,7 +79,7 @@
   background-color: #3A3C46;
   border-radius: 10px;
   border: none;
-  color: #ffffff;
+  color: #FFFFFF;
   display: flex;
   font-size: 17.51px;
   margin-bottom: 57px;
@@ -89,13 +89,13 @@
   width: 95.9%;
 }
 #wrapper #main_container #post_form #post_textarea:focus {
-  border: 1px solid #00a3ff;
+  border: 1px solid #00A3FF;
 }
 #wrapper #main_container #post_form #post_button {
-  background-color: #00a3ff;
+  background-color: #00A3FF;
   border-radius: 8.86px;
   border: none;
-  color: #ffffff;
+  color: #FFFFFF;
   cursor: pointer;
   height: 38px;
   padding: 5px;
@@ -174,7 +174,7 @@
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .post_delete_form span,
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .comment_delete_form span {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 10px;
   margin: 0px 8px;
   display: none;
@@ -188,12 +188,12 @@
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .post_delete_form button.no_button,
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .comment_delete_form button.no_button {
-  color: #6d7186;
+  color: #6D7186;
   display: none;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .post_delete_form button.yes_button,
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .comment_delete_form button.yes_button {
-  color: #a3a3ff;
+  color: #A3A3FF;
   margin: 0px 8px;
   display: none;
 }
@@ -203,7 +203,7 @@
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container {
   align-items: center;
-  color: #a3a3ff;
+  color: #A3A3FF;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -214,7 +214,7 @@
   display: flex;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details .post_time {
-  border-right: 1px solid #a3a3ff;
+  border-right: 1px solid #A3A3FF;
   padding-right: 50px;
   margin-left: 5px;
 }
@@ -228,7 +228,7 @@
   background-color: #3A3C46;
   border-radius: 10px;
   border: none;
-  color: #ffffff;
+  color: #FFFFFF;
   display: flex;
   font-size: 17.51px;
   height: 50px;
@@ -241,13 +241,13 @@
   width: 862px;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .comment_form .comment_textarea:focus {
-  border: 1px solid #00a3ff;
+  border: 1px solid #00A3FF;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .comment_form .comment_button {
-  background-color: #00a3ff;
+  background-color: #00A3FF;
   border-radius: 8.86px;
   border: none;
-  color: #ffffff;
+  color: #FFFFFF;
   cursor: pointer;
   height: 38px;
   position: absolute;
@@ -273,7 +273,7 @@
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list .comment .comment_action_container {
   align-items: center;
-  color: #a3a3ff;
+  color: #A3A3FF;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -312,11 +312,11 @@
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .topic_edit_textarea:focus,
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .comment_edit_textarea:focus,
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .comment_edit_textarea:focus {
-  border: 1px solid #00a3ff;
+  border: 1px solid #00A3FF;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .save_button,
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .save_button {
-  background-color: #00a3ff;
+  background-color: #00A3FF;
   border-radius: 8.86px;
   border: none;
   color: #FFFFFF;

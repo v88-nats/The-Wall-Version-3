@@ -16,7 +16,7 @@
   width: 876px;
 }
 #wrapper label {
-  color: #6d7186;
+  color: #6D7186;
   display: flex;
   flex-direction: column;
 }
@@ -27,20 +27,20 @@
   background-color: #31354F;
   border-radius: 9px;
   border: none;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 16px;
   margin-bottom: 18px;
   outline: none;
   padding: 20.5px 20px;
 }
 #wrapper label input:focus {
-  border: 1px solid #00a3ff;
+  border: 1px solid #00A3FF;
 }
 #wrapper button {
-  background-color: #00a3ff;
+  background-color: #00A3FF;
   border-radius: 9px;
   border: none;
-  color: #ffffff;
+  color: #FFFFFF;
   cursor: pointer;
   font: 700 21px "Roboto";
   height: 60px;
@@ -66,14 +66,14 @@
   width: 46px;
 }
 #wrapper #main_container header h1 {
-  color: #ffffff;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   font: 300 21px "Roboto";
 }
 #wrapper #main_container header h1 span {
   font-size: 17.51px;
-  color: #6d7186;
+  color: #6D7186;
 }
 #wrapper #main_container #signup_form #name_container {
   display: flex;
@@ -89,12 +89,12 @@
   text-align: center;
 }
 #wrapper #main_container footer p {
-  color: #6d7186;
+  color: #6D7186;
 }
 #wrapper #main_container footer p #login_link,
 #wrapper #main_container footer p #signup_link {
   text-decoration: none;
-  color: #00a3ff;
+  color: #00A3FF;
 }
 #wrapper aside {
   background-color: #3B3C43;
@@ -107,7 +107,7 @@
   width: 205px;
 }
 #wrapper aside h2 {
-  color: #ffffff;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   font: 400 25.55px "Roboto";
