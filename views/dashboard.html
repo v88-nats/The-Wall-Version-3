@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wall</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/global.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>THE WALL</h1>
+            <div id="user_profile_container">
+                <span id="user">Nathaniel Nardo</span>
+                <a id="logout" href="signin.html">Logout</a>
+            </div>
+        </header>
+        <div id="main_container">
+            <p id="username">Hello Nathaniel,</p>
+            <p id="welcome_message">Welcome to V88 Forum Dashboard</p>
+            <form id="post_form" action="#">
+                <textarea id="post_textarea" placeholder="Post your Topic..."></textarea>
+                <button type="submit" id="post_button">Post</button>
+            </form>
+
+            <h4>Recent Forums</h4>
+
+            <div id="post_forum_container">
+                <ul id="post_forum_list">
+                    <li id="no_post_yet">
+                        <span>No post yet.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="topic_template_container_clone">
+                <ul>
+                    <li data-post-id="" id="post_topic_clone" class="post">
+                        <p class="post_content"></p>
+                        <div class="post_action_container">
+                            <p class="post_details">Nathaniel Nardo <span class="post_time">few secs ago.</span> <span class="response_count">0 Responses</span></p>
+                            <div class="action_button_container">
+                                <button type="button" class="post_edit_button"></button>
+                                <form class="post_delete_form">
+                                    <button type="button" class="delete_button"></button>
+                                    <span>Confirm Delete?</span>
+                                    <button type="button" class="no_button">No</button>
+                                    <button type="submit" class="yes_button">Yes</button>
+                                </form>
+                            </div>    
+                        </div>
+
+                        <form class="comment_form" action="#">
+                            <textarea class="comment_textarea" placeholder="Post your response..."></textarea>
+                            <button type="submit" class="comment_button">Comment</button>
+                        </form>
+
+                        <div class="post_comment_container">
+                            <ul class="post_comment_list"></ul>
+                        </div>
+                    </li>
+
+                    <li data-comment-id="" id="comment_clone" class="comment">
+                        <p class="comment_content"></p>
+                        <div class="comment_action_container">
+                            <p class="comment_details">Nathaniel Nardo <span class="comment_time"> (few sec ago)</span></p>
+                            <div class="action_button_container">
+                                <button type="button" class="comment_edit_button"></button>
+                                <form class="comment_delete_form">
+                                    <button type="button" class="delete_button"></button>
+                                    <span>Confirm Delete?</span>
+                                    <button type="button" class="no_button">No</button>
+                                    <button type="submit" class="yes_button">Yes</button>
+                                </form>
+                            </div>
+                        </div>    
+                    </li>
+                </ul>
+
+                <form class="edit_form" action="#">
+                    <textarea class="edit_textarea"></textarea>
+                    <button type="submit" class="save_button">Save</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

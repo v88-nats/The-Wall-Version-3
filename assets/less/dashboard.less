@@ -1,0 +1,323 @@
+@blue: #00A3FF;
+@font: #6D7186;
+@purple: #A3A3FF;
+@white: #FFFFFF;
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.border-red{
+    border: 1px solid red !important;
+}
+#wrapper{
+    color: @white;
+    margin: 0px auto;
+    min-height: 100vh;
+    width: 1920px;
+    
+    header{
+        align-items: center;
+        background-color: #1E1F25;
+        display: flex;
+        height: 62px;
+        justify-content: space-between;
+        h1{
+            color: @white;
+            display: flex;
+            font: 300 21px "Roboto";
+            &::before{
+                content: "";
+                background: url("../images/the_wall_sprite.png") no-repeat -182px -9px;
+                height: 28px;
+                margin: 0px 9px 0px 25px;
+                width: 28px;
+            }
+        }
+        #user_profile_container{
+            display: flex;
+            font: 300 14px "Roboto";
+            #user{
+                border-right: 2px solid #3A3C46;
+                display: flex;
+                padding: 23px 26px 23px 0px;
+            }
+            #logout{
+                align-items: center;
+                color: @white;
+                display: flex;
+                margin: 0px 26px;
+                text-decoration: none;
+                &::before{
+                    content: "";
+                    align-items: center;
+                    background: url("../images/the_wall_sprite.png") no-repeat -255px -16px;
+                    height: 13px;
+                    margin-right: 10px;
+                    width: 13px;
+                }
+            }
+        }
+    }
+    #main_container{
+        background-color: #2C2D34;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 471px;
+        #username{
+            font-size: 21px;
+            margin-bottom: 6px;
+        }
+        #welcome_message{
+            margin-bottom: 56px;
+            color: @font;
+            font-size: 17.51px;
+        }
+        #post_form{
+            position: relative;
+            #post_textarea{
+                background-color: #3A3C46;
+                border-radius: 10px;
+                border: none;
+                color: @white;
+                display: flex;
+                font-size: 17.51px;
+                margin-bottom:  57px;
+                outline: none;
+                padding: 19px 20px;
+                resize: none;
+                width: 938px;
+                &:focus{
+                    border: 1px solid @blue;
+                }
+            }
+            #post_button{
+                background-color: @blue;
+                border-radius: 8.86px;
+                border: none;
+                color: @white;
+                cursor: pointer;
+                height: 38px;
+                padding: 5px;
+                position: absolute;
+                right: 20px;
+                top: 21px;
+                width: 100px;
+            }
+        }
+        h4{
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+        #post_forum_container{
+            background-color: #3A3C46;
+            border-radius: 9px;
+            display: flex;
+            flex-direction: column;
+            width: 978px;
+            #post_forum_list{
+                background-color: #2C2D34;
+                list-style: none;
+                #no_post_yet{
+                    background-color: #2C2D34;
+                    border-radius: 9px;
+                    border: 1px dashed #6D6E75;
+                    margin-top: 32px;
+                    padding: 38px 0px;
+                    text-align: center;
+                    width: 976px;
+                }
+                .post{
+                    background-color: #1E1F25;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 30px;
+                    padding: 28px 30px 30px 30px;
+                    .action_button_container{
+                        align-items: center;
+                        display: flex;
+                        flex-wrap: wrap;
+                        .post_edit_button,
+                        .comment_edit_button{
+                            background: url("../images/the_wall_sprite.png") no-repeat -305px -10px;
+                            background-color: #32333C;
+                            border-radius: 4px;
+                            border: 1px solid #606066;
+                            cursor: pointer;
+                            display: flex;
+                            height: 12px;
+                            margin-right: 5px;
+                            padding: 13.5px;
+                            width: 12px;
+                        }
+                        .post_delete_form,
+                        .comment_delete_form{
+                            align-items: center;
+                            background-color: #32333C;
+                            border-radius: 4px;
+                            border: 1px solid #606066;
+                            display: flex;
+                            .delete_button{
+                                background: url("../images/the_wall_sprite.png") no-repeat -362px -10px;
+                                background-color: #323232;
+                                border-radius: 4px;
+                                border: 1px solid #606066;
+                                height: 12px;
+                                padding: 13.5px;
+                                width: 12px;
+                            }
+                            span{
+                                color: @white;
+                                font-size: 10px;
+                                margin: 0px 8px;
+                                display: none;
+                            }
+                            button{
+                                background-color: #323232;
+                                border: none;
+                                cursor: pointer;
+                                font-size: 10px;
+                                &.no_button{
+                                    color: @font;
+                                    display: none;
+                                }
+                                &.yes_button{
+                                    color: @purple;
+                                    margin: 0px 8px;
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .post_content{
+                        font-style: italic;
+                        margin-bottom: 8px;
+                    }
+                    .post_action_container{
+                        align-items: center;
+                        color: @purple;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin-bottom: 25px;
+                        .post_details{
+                            display: flex;
+                            .post_time{
+                                border-right: 1px solid @purple;
+                                padding-right: 50px;
+                            }
+                            .response_count{
+                                margin-left: 20px;
+                            }
+                        }    
+                    }
+                    .comment_form{
+                        position: relative;
+                        .comment_textarea{
+                            background-color: #3A3C46;
+                            border-radius: 10px;
+                            border: none;
+                            color: @white;
+                            display: flex;
+                            font-size: 17.51px;
+                            height: 50px;
+                            justify-content: space-between;
+                            margin-bottom: 28px;
+                            margin-left: 10px;
+                            outline: none;
+                            padding: 15px 20px;
+                            resize: none;    
+                            width: 862px;
+                            &:focus{
+                                border: 1px solid @blue;
+                            }
+                        }
+                        .comment_button{
+                            background-color: @blue;
+                            border-radius: 8.86px;
+                            border: none;
+                            color: @white;
+                            cursor: pointer;
+                            height: 38px;
+                            position: absolute;
+                            right: 25px;
+                            top: 21px;
+                            width: 100px;
+                        }
+                    }
+                    .post_comment_container{
+                        .post_comment_list{
+                            list-style: none;
+                            .comment{
+                                margin-bottom: 30px;
+                                margin-left: 10px;
+                                padding: 0px;
+                                &:first-child{
+                                    border-bottom: 1px solid #3F404A;
+                                    border-radius: none;
+                                }
+                                .comment_content{
+                                    font-style: italic;
+                                    margin-bottom: 8px;
+                                }
+                                .comment_action_container{
+                                    align-items: center;
+                                    color: @purple;
+                                    display: flex;
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    justify-content: space-between;
+                                    margin-bottom: 25px;
+                                    .comment_details{
+                                        display: flex;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .active_post_edit_form,
+                    .active_comment_edit_form{
+                        position: relative;
+                        .edit_textarea{
+                            background-color: #3A3C46;
+                            border-radius: 10px;
+                            border: none;
+                            color: #FFFFFF;
+                            display: flex;
+                            font-size: 17.51px;
+                            height: 50px;
+                            margin-bottom: 28px;
+                            margin-left: 10px;
+                            outline: none;
+                            padding: 15px 20px;
+                            resize: none;
+                            width: 862px;
+                            &:focus{
+                                border: 1px solid @blue;
+                            }
+                        }
+                        .save_button{
+                            background-color: #00A3FF;
+                            border-radius: 8.86px;
+                            border: none;
+                            color: #FFFFFF;
+                            cursor: pointer;
+                            height: 38px;
+                            width: 100px;
+                            position: absolute;
+                            top: 21px;
+                            right: 25px;
+                        }
+                    }
+                }
+            }
+        }
+        #topic_template_container_clone{
+            display: none;
+        }
+
+    }
+}

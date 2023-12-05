@@ -1,0 +1,130 @@
+@blue: #00A3FF;
+@font: #6D7186;
+@white: #FFFFFF;
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.border-red{
+    border: 1px solid red !important;
+}
+#wrapper{
+    background-color: #2C2D34;
+    display: flex;
+    height: 670px;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 221px 282px;
+    width: 876px;
+    label{
+        color: @font;
+        display: flex;
+        flex-direction: column;
+        span{
+            margin-bottom: 8px;
+        }
+        input{
+            background-color: #31354F;
+            border-radius: 9px;
+            border: none;
+            color: @white;
+            font-size: 16px;
+            margin-bottom: 18px;
+            outline: none;
+            padding: 20.5px 20px;
+            &:focus{
+                border: 1px solid @blue;
+            }
+        }
+    }
+    button{
+        background-color: @blue;
+        border-radius: 9px;
+        border: none;
+        color: @white;
+        cursor: pointer;
+        font: 700 21px "Roboto";
+        height: 60px;
+        margin: 13px 0px 37px 0px;
+        width: 515px;
+    }
+    #main_container{
+        background-color: #1D1F2B;
+        border-radius: 20px 0px 0px 20px;
+        height: 536px;
+        padding: 75px 78px;
+        width: 515px;
+        header{
+            display: flex;
+            margin-bottom: 47px;
+            &::before{
+                content: "";
+                background: url("../images/the_wall_sprite.png") no-repeat 0 0;
+                height: 46px;
+                margin-right: 30px;
+                width: 46px;
+            }
+            h1{
+                color: @white;
+                display: flex;
+                flex-direction: column;
+                font: 300 21px "Roboto";
+                span{
+                    font-size: 17.51px;
+                    color: @font;
+                }
+            }
+        }
+        #signup_form{
+            #name_container{
+                display: flex;
+                flex-direction: row;
+                label{
+                    input{
+                        width: 210px;
+                        &#firstname{
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            text-align: center;
+            p{
+                color: @font;
+                #login_link,
+                #signup_link{
+                    text-decoration: none;
+                    color: @blue;
+                }
+            }
+        }
+    }
+    aside{
+        background-color: #3B3C43;
+        background-image:  url("../images/thewall.png");
+        background-repeat: no-repeat;
+        border-radius: 0px 20px 20px 0px;
+        display: flex;
+        height: 611px;
+        padding: 75px 0px 0px 51px;
+        width: 205px;
+        h2{
+            color: @white;
+            display: flex;
+            flex-direction: column;
+            font: 400 25.55px "Roboto";
+            letter-spacing: 8px;
+            &::before{
+                content: "";
+                background: url("../images/the_wall_sprite.png") no-repeat -91px 0;
+                height: 46px;
+                margin-bottom: 7px;
+                width: 46px;
+            }
+        }
+    }
+}
