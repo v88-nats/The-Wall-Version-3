@@ -36,15 +36,15 @@
   font: 300 14px "Roboto";
 }
 #wrapper header #user_profile_container #user {
-  border-right: 2px solid #3A3C46;
   display: flex;
   padding: 23px 26px 23px 0px;
 }
 #wrapper header #user_profile_container #logout {
   align-items: center;
+  border-left: 2px solid #3A3C46;
   color: #ffffff;
   display: flex;
-  margin: 0px 26px;
+  padding: 23px 26px;
   text-decoration: none;
 }
 #wrapper header #user_profile_container #logout::before {
@@ -59,7 +59,7 @@
   background-color: #2C2D34;
   display: flex;
   flex-direction: column;
-  padding: 50px 0px;
+  padding: 50px 26px;
   max-width: 978px;
   margin: 0px auto;
 }
@@ -84,9 +84,9 @@
   font-size: 17.51px;
   margin-bottom: 57px;
   outline: none;
-  padding: 19px 20px;
+  padding: 19.3px 20px;
   resize: none;
-  width: 95.9%;
+  width: 96%;
 }
 #wrapper #main_container #post_form #post_textarea:focus {
   border: 1px solid #00a3ff;
@@ -98,10 +98,9 @@
   color: #ffffff;
   cursor: pointer;
   height: 38px;
-  padding: 5px;
   position: absolute;
   right: 20px;
-  top: 21px;
+  bottom: 78px;
   width: 100px;
 }
 #wrapper #main_container h4 {
@@ -113,7 +112,7 @@
   border-radius: 9px;
   display: flex;
   flex-direction: column;
-  width: 978px;
+  width: 100%;
 }
 #wrapper #main_container #post_forum_container #post_forum_list {
   background-color: #2C2D34;
@@ -238,7 +237,7 @@
   outline: none;
   padding: 15px 20px;
   resize: none;
-  width: 862px;
+  width: 94.5%;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .comment_form .comment_textarea:focus {
   border: 1px solid #00a3ff;
@@ -314,6 +313,10 @@
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .comment_edit_textarea:focus {
   border: 1px solid #00a3ff;
 }
+#wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .comment_edit_textarea,
+#wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .comment_edit_textarea {
+  margin-left: 0px;
+}
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .save_button,
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .save_button {
   background-color: #00a3ff;
@@ -333,11 +336,52 @@
   display: none;
 }
 @media only screen and (max-width: 480px) {
-  #user_profile_container {
-    display: flex;
-    font: 300 14px "Roboto";
-  }
-  #user_profile_container #user {
+  #wrapper header #user_profile_container #user {
     display: none;
+  }
+  #wrapper header #user_profile_container #logout span {
+    display: none;
+  }
+  #wrapper header #user_profile_container #logout::before {
+    margin: 0px;
+  }
+  #wrapper #main_container #post_form #post_textarea {
+    height: 175px;
+    width: 90.9%;
+    padding: 20px;
+  }
+  #wrapper #main_container #post_form #post_button {
+    bottom: 77px;
+    right: 15px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list #no_post_yet {
+    width: 100%;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post {
+    width: 85%;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details {
+    flex-direction: column;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details .post_time {
+    display: none;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details .response_count {
+    margin: 0px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .topic_edit_textarea {
+    margin-left: 0px;
+    width: 89%;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .comment_form .comment_textarea {
+    margin-left: 0px;
+    width: 89%;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list .comment .comment_action_container .comment_details .comment_time {
+    display: none;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .comment_edit_textarea {
+    margin-left: 0px;
+    width: 89%;
   }
 }
