@@ -2,6 +2,7 @@
   font-family: 'Roboto', sans-serif;
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 .border-red {
   border: 1px solid red !important;
@@ -60,7 +61,7 @@
   display: flex;
   flex-direction: column;
   padding: 50px 26px;
-  max-width: 978px;
+  max-width: 1030px;
   margin: 0px auto;
 }
 #wrapper #main_container #username {
@@ -82,11 +83,12 @@
   color: #FFFFFF;
   display: flex;
   font-size: 17.51px;
+  height: 80px;
   margin-bottom: 57px;
   outline: none;
   padding: 19.3px 20px;
   resize: none;
-  width: 96%;
+  width: 100%;
 }
 #wrapper #main_container #post_form #post_textarea:focus {
   border: 1px solid #00A3FF;
@@ -125,7 +127,7 @@
   margin-top: 32px;
   padding: 38px 0px;
   text-align: center;
-  width: 976px;
+  width: 100%;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post {
   background-color: #1E1F25;
@@ -199,6 +201,7 @@
 #wrapper #main_container #post_forum_container #post_forum_list .post .post_content {
   font-style: italic;
   margin-bottom: 8px;
+  word-wrap: break-word;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container {
   align-items: center;
@@ -230,14 +233,14 @@
   color: #FFFFFF;
   display: flex;
   font-size: 17.51px;
-  height: 50px;
+  height: 80px;
   justify-content: space-between;
   margin-bottom: 28px;
   margin-left: 10px;
   outline: none;
   padding: 15px 20px;
   resize: none;
-  width: 94.5%;
+  width: 99%;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .comment_form .comment_textarea:focus {
   border: 1px solid #00A3FF;
@@ -250,8 +253,8 @@
   cursor: pointer;
   height: 38px;
   position: absolute;
-  right: 25px;
-  top: 21px;
+  right: 20px;
+  bottom: 48px;
   width: 100px;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list {
@@ -262,13 +265,14 @@
   margin-left: 10px;
   padding: 0px;
 }
-#wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list .comment:first-child {
+#wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list .comment:not(:last-child) {
   border-bottom: 1px solid #3F404A;
   border-radius: none;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list .comment .comment_content {
   font-style: italic;
   margin-bottom: 8px;
+  word-wrap: break-word;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list .comment .comment_action_container {
   align-items: center;
@@ -299,13 +303,13 @@
   color: #FFFFFF;
   display: flex;
   font-size: 17.51px;
-  height: 50px;
+  height: 80px;
   margin-bottom: 28px;
   margin-left: 10px;
   outline: none;
   padding: 15px 20px;
   resize: none;
-  width: 862px;
+  width: 99%;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .topic_edit_textarea:focus,
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .topic_edit_textarea:focus,
@@ -316,9 +320,12 @@
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .comment_edit_textarea,
 #wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .comment_edit_textarea {
   margin-left: 0px;
+  width: 100%;
 }
-#wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .save_button,
-#wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .save_button {
+#wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .topic_save_button,
+#wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .topic_save_button,
+#wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .comment_save_button,
+#wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .comment_save_button {
   background-color: #00A3FF;
   border-radius: 8.86px;
   border: none;
@@ -327,13 +334,32 @@
   display: flex;
   height: 38px;
   position: absolute;
-  right: 25px;
-  top: 21px;
+  right: 20px;
+  bottom: 48px;
   padding: 0px 36px;
   align-items: center;
 }
+#wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .comment_save_button,
+#wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .comment_save_button {
+  bottom: 20px;
+  right: 20px;
+}
 #wrapper #main_container #topic_template_container_clone {
   display: none;
+}
+@media only screen and (max-width: 600px) {
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details {
+    flex-direction: column;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details .post_time {
+    display: none;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details .response_count {
+    margin: 0px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list .comment .comment_action_container .comment_details .comment_time {
+    display: none;
+  }
 }
 @media only screen and (max-width: 480px) {
   #wrapper header #user_profile_container #user {
@@ -347,18 +373,12 @@
   }
   #wrapper #main_container #post_form #post_textarea {
     height: 175px;
-    width: 90.9%;
+    width: 100%;
     padding: 20px;
   }
   #wrapper #main_container #post_form #post_button {
     bottom: 77px;
-    right: 15px;
-  }
-  #wrapper #main_container #post_forum_container #post_forum_list #no_post_yet {
-    width: 100%;
-  }
-  #wrapper #main_container #post_forum_container #post_forum_list .post {
-    width: 85%;
+    right: 20px;
   }
   #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details {
     flex-direction: column;
@@ -369,19 +389,46 @@
   #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details .response_count {
     margin: 0px;
   }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form {
+    position: relative;
+  }
   #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .topic_edit_textarea {
     margin-left: 0px;
-    width: 89%;
+    width: 100%;
+    height: 175px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .topic_save_button {
+    position: absolute;
+    bottom: 48px;
+    right: 20px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .active_post_edit_form .comment_save_button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .comment_form {
+    position: relative;
   }
   #wrapper #main_container #post_forum_container #post_forum_list .post .comment_form .comment_textarea {
+    height: 175px;
     margin-left: 0px;
-    width: 89%;
+    width: 100%;
+    padding: 20px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .comment_form .comment_button {
+    position: absolute;
+    bottom: 47px;
+    right: 20px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list .comment {
+    margin-left: 0px;
   }
   #wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list .comment .comment_action_container .comment_details .comment_time {
     display: none;
   }
   #wrapper #main_container #post_forum_container #post_forum_list .post .active_comment_edit_form .comment_edit_textarea {
-    margin-left: 0px;
-    width: 89%;
+    width: 100%;
+    height: 175px;
   }
 }

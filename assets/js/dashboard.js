@@ -1,10 +1,3 @@
-/**
- * DOCU: Dashboard Html
- * Last Updated: December 05, 2023
- * @memberof module:jQuery_The_Wall_Final
- * @author Nathaniel
- */
-
 $(document).ready(function(){
     $("body")
         .on("submit", "#post_form", postTopic)
@@ -60,7 +53,7 @@ function postTopic(event){
 
 /**
  * DOCU: Function for showing edit_form and editing a topic.
- * Last Updated: December 05, 2023
+ * Last Updated: December 06, 2023
  * @memberof module:jQuery_The_Wall_Final
  * @author Nathaniel
  */
@@ -76,11 +69,12 @@ function showPostEditForm(event){
     let post_content = post.find(".post_content").text();
     edit_form.find(".topic_edit_textarea").val(post_content);
     post.find(".post_content").replaceWith(edit_form);
+    post.find(".action_button_container").hide();
 }
 
 /**
  * DOCU: Function for saving changes when editing a topic.
- * Last Updated: December 05, 2023
+ * Last Updated: December 06, 2023
  * @memberof module:jQuery_The_Wall_Final
  * @author Nathaniel
  */
@@ -93,6 +87,7 @@ function savePostEditForm(event){
 
     post.prepend(`<p class="post_content">${edit_textarea}</p>`);
     post.find(".active_post_edit_form").remove();
+    post.find(".action_button_container").show();
 }
 
 /**
@@ -130,7 +125,7 @@ function postComment(event){
 
 /**
  * DOCU: Function for showing edit_form and editing a comment.
- * Last Updated: December 05, 2023
+ * Last Updated: December 06, 2023
  * @memberof module:jQuery_The_Wall_Final
  * @author Nathaniel
  */
@@ -146,11 +141,12 @@ function showCommentEditForm(event){
     let comment_content = comment.find(".comment_content").text();
     edit_form.find(".comment_edit_textarea").val(comment_content);
     comment.find(".comment_content").replaceWith(edit_form);
+    comment.find(".action_button_container").hide();
 }
 
 /**
  * DOCU: Function for saving changes when editing a topic.
- * Last Updated: December 05, 2023
+ * Last Updated: December 06, 2023
  * @memberof module:jQuery_The_Wall_Final
  * @author Nathaniel
  */
@@ -163,6 +159,7 @@ function saveCommentEditForm(event){
 
     comment.prepend(`<p class="comment_content">${edit_textarea}</p>`);
     comment.find(".active_comment_edit_form").remove();
+    comment.find(".action_button_container").show();
 }
 
 /**
