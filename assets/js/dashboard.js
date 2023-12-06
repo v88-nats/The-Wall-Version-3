@@ -5,7 +5,7 @@ $(document).ready(function(){
         .on("submit", ".active_post_edit_form", savePostEditForm)
         /* Function for toggling display of other elements of delete_form when delete button is clicked */
         .on("click", ".delete_button", function(){
-            $(this).siblings("span, .no_button, .yes_button").toggle();
+            $(this).siblings("span, .no_button, .yes_button").show();
         })
         /* Function for hiding other elements of delete_form when no button is clicked */
         .on("click", ".no_button", function(){                                      

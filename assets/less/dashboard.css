@@ -105,6 +105,9 @@
   bottom: 78px;
   width: 100px;
 }
+#wrapper #main_container #post_form #post_button:hover {
+  background-color: #0050C8;
+}
 #wrapper #main_container h4 {
   font-weight: 400;
   margin-bottom: 16px;
@@ -155,6 +158,10 @@
   padding: 13.5px;
   width: 12px;
 }
+#wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .post_edit_button:hover,
+#wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .comment_edit_button:hover {
+  background-color: #FFFFFF;
+}
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .post_delete_form,
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .comment_delete_form {
   align-items: center;
@@ -168,17 +175,21 @@
   background: url("../images/the_wall_sprite.png") no-repeat -362px -10px;
   background-color: #323232;
   border-radius: 4px;
-  border: 1px solid #606066;
   height: 12px;
   padding: 13.5px;
   width: 12px;
+}
+#wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .post_delete_form .delete_button:hover,
+#wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .comment_delete_form .delete_button:hover {
+  background-color: #FFFFFF;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .post_delete_form span,
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .comment_delete_form span {
   color: #FFFFFF;
   font-size: 10px;
-  margin: 0px 8px;
+  padding: 7px 8px;
   display: none;
+  border-left: 1px solid #606066;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .post_delete_form button,
 #wrapper #main_container #post_forum_container #post_forum_list .post .action_button_container .comment_delete_form button {
@@ -256,6 +267,9 @@
   right: 20px;
   bottom: 48px;
   width: 100px;
+}
+#wrapper #main_container #post_forum_container #post_forum_list .post .comment_form .comment_button:hover {
+  background-color: #0050C8;
 }
 #wrapper #main_container #post_forum_container #post_forum_list .post .post_comment_container .post_comment_list {
   list-style: none;
@@ -374,11 +388,17 @@
   #wrapper #main_container #post_form #post_textarea {
     height: 175px;
     width: 100%;
-    padding: 20px;
+    padding: 15px 20px 20px 20px;
   }
   #wrapper #main_container #post_form #post_button {
     bottom: 77px;
     right: 20px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_content {
+    margin-bottom: 13px;
+  }
+  #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container {
+    margin-bottom: 31px;
   }
   #wrapper #main_container #post_forum_container #post_forum_list .post .post_action_container .post_details {
     flex-direction: column;
@@ -414,7 +434,7 @@
     height: 175px;
     margin-left: 0px;
     width: 100%;
-    padding: 20px;
+    padding: 15px 20px 20px 20px;
   }
   #wrapper #main_container #post_forum_container #post_forum_list .post .comment_form .comment_button {
     position: absolute;

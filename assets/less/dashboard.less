@@ -106,6 +106,9 @@
                 right: 20px;
                 bottom: 78px;
                 width: 100px;
+                &:hover{
+                    background-color: #0050C8;
+                }
             }
         }
         h4{
@@ -153,6 +156,9 @@
                             margin-right: 5px;
                             padding: 13.5px;
                             width: 12px;
+                            &:hover{
+                                background-color: @white;
+                            }
                         }
                         .post_delete_form,
                         .comment_delete_form{
@@ -165,16 +171,20 @@
                                 background: url("../images/the_wall_sprite.png") no-repeat -362px -10px;
                                 background-color: #323232;
                                 border-radius: 4px;
-                                border: 1px solid #606066;
+                                // border: 1px solid #606066;
                                 height: 12px;
                                 padding: 13.5px;
                                 width: 12px;
+                                &:hover{
+                                    background-color: @white;
+                                }
                             }
                             span{
                                 color: @white;
                                 font-size: 10px;
-                                margin: 0px 8px;
+                                padding: 7px 8px;
                                 display: none;
+                                border-left: 1px solid #606066;
                             }
                             button{
                                 background-color: #323232;
@@ -250,6 +260,9 @@
                             right: 20px;
                             bottom: 48px;
                             width: 100px;
+                            &:hover{
+                                background-color: #0050C8;
+                            }
                         }
                     }
                     .post_comment_container{
@@ -263,6 +276,9 @@
                                     border-bottom: 1px solid #3F404A;
                                     border-radius: none;
                                 }
+                                // &:last-child{
+                                //     margin-bottom: 0px;
+                                // }
                                 .comment_content{
                                     font-style: italic;
                                     margin-bottom: 8px;
@@ -398,7 +414,7 @@
                 #post_textarea{
                     height: 175px;
                     width: 100%;
-                    padding: 20px;
+                    padding: 15px 20px 20px 20px;
                 }
                 #post_button{
                     bottom: 77px;
@@ -408,7 +424,11 @@
             #post_forum_container{
                 #post_forum_list{     
                     .post{
+                        .post_content{
+                            margin-bottom: 13px;
+                        }
                         .post_action_container{
+                            margin-bottom: 31px;
                             .post_details{
                                 flex-direction: column;
                                 .post_time{
@@ -443,7 +463,7 @@
                                 height: 175px;
                                 margin-left: 0px;
                                 width: 100%;
-                                padding: 20px;
+                                padding: 15px 20px 20px 20px;
                             }
                             .comment_button{
                                 position: absolute;
